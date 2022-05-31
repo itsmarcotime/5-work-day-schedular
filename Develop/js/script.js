@@ -8,3 +8,18 @@ setInterval(function() {
     clock.textContent = rightNow;
 
 }, 1000);
+
+
+//HELP HERE
+function auditHour() {
+
+    var currentDate = moment().format("MMMM Do, YYYY - hh:mm:ss a");
+    
+    if (moment(currentDate).isAfter(currentDate, 'hour')) {
+
+        console.log("itworks");
+    }
+
+};
+
+auditHour();
