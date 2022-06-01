@@ -1,4 +1,5 @@
 var clock = document.getElementById("currentDay");
+var buttonEl = document.getElementById("btn");
 
 //makes clock run in live time
 setInterval(function() {
@@ -10,7 +11,7 @@ setInterval(function() {
 }, 1000);
 
 
-//HELP HERE this loops thru timeblock and depending on current time colors should change
+//this loops thru timeblock and depending on current time colors should change
 $(".description").each(function() {
 
     var currentTime = moment().hours();
@@ -30,3 +31,12 @@ $(".description").each(function() {
 
 });
 
+
+//HELP HERE 
+var saveStuff = function() {
+    localStorage.setItem("", JSON.stringify());
+};
+
+buttonEl.addEventListener("click", saveStuff);
+
+  
