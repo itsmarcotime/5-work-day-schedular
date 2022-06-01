@@ -1,5 +1,5 @@
 var clock = document.getElementById("currentDay");
-var buttonEl = document.getElementById("btn");
+
 
 //makes clock run in live time
 setInterval(function() {
@@ -32,11 +32,18 @@ $(".description").each(function() {
 });
 
 
-//HELP HERE 
+//HELP HERE
 var saveStuff = function() {
-    localStorage.setItem("", JSON.stringify());
+    var text = $(this).siblings(".decription").val();
+
+    console.log(text);
 };
 
-buttonEl.addEventListener("click", saveStuff);
+$(".saveBtn").click(saveStuff);
+
+
+
+
+
 
   
