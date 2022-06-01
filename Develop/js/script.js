@@ -10,16 +10,23 @@ setInterval(function() {
 }, 1000);
 
 
-//HELP HERE
-function auditHour() {
+//HELP HERE this loops thru timeblock and depending on current time colors should change
+$(".description").each(function() {
 
-    var currentDate = moment().format("MMMM Do, YYYY - hh:mm:ss a");
-    
-    if (moment(currentDate).isAfter(currentDate, 'hour')) {
+    var currentTime = moment().hours();
 
-        console.log("itworks");
-    }
+    var timeBlock = $(this).attr("id");
 
-};
+    for (var i = 0; i < timeBlock.length; i++) {
 
-auditHour();
+        if (timeBlock[i] < currentTime) {
+            $(this).addClass("backgroundGreen");
+        } else if (timeBlock[i] > currentTime) {
+            $(this).addClass("backgroundRed");
+        } else {
+            $(this).addClass("description");
+        }
+    };
+
+});
+
