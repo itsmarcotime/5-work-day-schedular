@@ -34,9 +34,13 @@ $(".description").each(function() {
 
 //HELP HERE
 var saveStuff = function() {
+
     var text = $(this).siblings(".decription").val();
 
     console.log(text);
+
+    localStorage.setItem("", JSON.stringify());
+    
 };
 
 $(".saveBtn").click(saveStuff);
