@@ -33,18 +33,35 @@ $(".description").each(function() {
 
 
 //HELP HERE
-var saveStuff = function() {
+var saveStuff = function(e) {
 
-    var text = $(this).siblings(".decription").val();
+    e.preventDefault();
+
+    var text = $(this).siblings(".description").val();
+    var hour = $(this).siblings(".description").attr("id");
 
     console.log(text);
 
-    localStorage.setItem("", JSON.stringify());
-    
+    localStorage.setItem(hour, text);
+
+};
+
+function loadStuff() {
+
+    $("#9 .description").val(localStorage.getItem("9"));
+    $("#10 .description").val(localStorage.getItem("10"));
+    $("#11 .description").val(localStorage.getItem("11"));
+    $("#12 .description").val(localStorage.getItem("12"));
+    $("#13 .description").val(localStorage.getItem("13"));
+    $("#14 .description").val(localStorage.getItem("14"));
+    $("#15 .description").val(localStorage.getItem("15"));
+    $("#16 .description").val(localStorage.getItem("16"));
+    $("#17 .description").val(localStorage.getItem("17"));
+
 };
 
 $(".saveBtn").click(saveStuff);
-
+loadStuff();
 
 
 
