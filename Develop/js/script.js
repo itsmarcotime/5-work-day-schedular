@@ -19,7 +19,7 @@ $(".description").each(function() {
     var timeBlock = $(this).attr("id");
 
     if (timeBlock < currentTime) {
-        $(this).adClass("past");
+        $(this).addClass("past");
     } else if (timeBlock === currentTime) {
         $(this).removeClass("past");
         $(this).addClass("present");
