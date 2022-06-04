@@ -20,12 +20,12 @@ $(".description").each(function() {
 
     for (var i = 0; i < timeBlock.length; i++) {
 
-        if (timeBlock[i] < currentTime) {
+        if (timeBlock[i] > currentTime) {
             $(this).addClass("backgroundGreen");
-        } else if (timeBlock[i] > currentTime) {
+        } else if (timeBlock[i] < currentTime) {
             $(this).addClass("backgroundRed");
         } else {
-            $(this).addClass("description");
+            $(this).addClass("backgroundGrey");
         }
     };
 
