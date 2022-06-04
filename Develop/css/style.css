@@ -73,14 +73,4 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
-.backgroundRed {
-  background-color: #ff6961;
-}
 
-.backgroundGreen {
-  background-color: #77dd77;
-}
-
-.backgroundGrey {
-  background-color: gray;
-}

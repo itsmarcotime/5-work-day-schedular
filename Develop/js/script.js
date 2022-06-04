@@ -18,16 +18,16 @@ $(".description").each(function() {
 
     var timeBlock = $(this).attr("id");
 
-    for (var i = 0; i < timeBlock.length; i++) {
-
-        if (timeBlock[i] > currentTime) {
-            $(this).addClass("backgroundGreen");
-        } else if (timeBlock[i] < currentTime) {
-            $(this).addClass("backgroundRed");
-        } else {
-            $(this).addClass("backgroundGrey");
-        }
-    };
+    if (timeBlock < currentTime) {
+        $(this).adClass("past");
+    } else if (timeBlock === currentTime) {
+        $(this).removeClass("past");
+        $(this).addClass("present");
+    } else {
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+        $(this).addClass("future");
+    }
 
 });
 
